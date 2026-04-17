@@ -12,7 +12,7 @@ import GridLayout from "@/layouts/GridLayout.astro";
       <BounceText
         client:load
         className="text-2xl md:text-4xl font-bold mb-2 text-center"
-        text="Author Information"
+        text="Author \u00A0 Information"
       />
 
       <section class="border-4 border-card-foreground bg-card p-6 sm:shadow-[8px_8px_0_0]">
@@ -26,11 +26,14 @@ import GridLayout from "@/layouts/GridLayout.astro";
         <div class="space-y-3 text-sm">
           <div class="bg-background border-2 border-card-foreground p-4">
             <p class="font-bold text-base">國友大睦（ひろむ / hiromu kunitomo）</p>
-            <p class="text-muted-foreground mt-1">Webアプリケーションエンジニア</p>
+            <p class="text-muted-foreground mt-1">福井大学大学院工学研究科博士前期課程 産業創成工学専攻経営技術革新情報工学コース所属のデータエンジニアです。</p>
           </div>
           <div class="bg-background border-2 border-card-foreground p-4 flex items-start gap-2">
             <MapPinIcon size={18} className="mt-0.5 text-accent" />
-            <p>福井県鯖江市出身。Web開発やプログラミング学習に関する発信をしています。</p>
+            <p>
+              滋賀県長浜市出身、福井大学大学院博士前期課程のデータエンジニア。大学からCやPython、html/cssなどでプログラミングを本格的に学び、現在は長期インターンにてastroなどでHP制作を手がける。<br>
+              大学院の専門はデータ分析・社会工学・経営工学。
+            </p>
           </div>
         </div>
       </section>
@@ -42,18 +45,18 @@ import GridLayout from "@/layouts/GridLayout.astro";
 
         <div class="space-y-3 text-sm">
           <div class="bg-background border-2 border-card-foreground p-4">
-            <p class="font-bold">IchigoJam検定1級</p>
+            <p class="font-bold">無人航空機操縦士2等</p>
+            <p class="font-bold">ボイラー技師2級</p>
             <p class="text-muted-foreground mt-1">
-              教育向けプログラミング環境 IchigoJam に関する知識と実践経験を活かして活動しています。
             </p>
           </div>
 
           <div class="bg-background border-2 border-card-foreground p-4">
             <div class="flex items-center gap-2 font-bold">
               <BookOpenTextIcon size={18} />
-              技術書執筆
+              教本執筆
             </div>
-            <p class="mt-1">「FOR文と配列にチャレンジする Hana道場式プログラミング」</p>
+            <p class="mt-1">IchigoJamミッション集</p>
             <a
               href="https://hanadojo.official.ec/items/90694010"
               target="_blank"
@@ -71,8 +74,8 @@ import GridLayout from "@/layouts/GridLayout.astro";
           <h2 class="text-accent-foreground font-bold">このブログについて</h2>
         </div>
         <div class="bg-background border-2 border-card-foreground p-4 text-sm leading-relaxed space-y-2">
-          <p>このブログでは、Web技術、プログラミング、学習ノートを中心に発信しています。</p>
-          <p>初心者にも伝わる構成を意識しつつ、実務で使える内容を丁寧にまとめています。</p>
+          <p>このブログでは、学んだプログラミング、データ分析、大学院での学習内容などを中心に発信しています。</p>
+          <p>qiitaやZennのような参考ページではなくメモに近い形になりますが、面白おかしく読んでいただければと思います。</p>
         </div>
       </section>
     </div>

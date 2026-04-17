@@ -55,7 +55,9 @@ const AuthorCard = () => {
             </div>
             <div className="bg-background border-2 border-card-foreground p-2">
               <p className="text-xs sm:text-sm leading-relaxed mt-1">
-                福井県鯖江市出身のWebアプリケーションエンジニア。趣味はツーリングとゲーム。
+                滋賀県長浜市出身、福井大学大学院博士前期課程のデータエンジニア。
+                大学からCやPython、html/cssなどでプログラミングを本格的に学び、現在は長期インターンにてastroなどでHP制作を手がける。
+                大学院の専門はデータ分析・社会工学・経営工学。
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -64,14 +66,14 @@ const AuthorCard = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                ⭐ IchigoJam検定1級
+                ⭐ 無人航空機操縦士2等
               </motion.span>
               <motion.span
                 className="inline-block px-2 py-1 text-xs bg-secondary shadow-[2px_2px_0_0] shadow-secondary/50 text-secondary-foreground border-2 border-secondary"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                📚 技術書執筆
+                📚 ボイラー技師2級
               </motion.span>
             </div>
             <motion.div
