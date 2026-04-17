@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
+@import "tailwindcss";
+@import "tailwindcss-animated";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+@plugin "@tailwindcss/typography";
+
+/* IchigoJam Fontの読み込み */
+@font-face {
+  font-family: "IchigoJam";
+  src: url("/fonts/IchigoJam-1.4.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --background: #3c4043;
+  --foreground: oklch(0.3092 0.0518 219.6516);
+  --card: oklch(0.9615 0.0372 97.0794);
+  --card-foreground: oklch(0.3092 0.0518 219.6516);
+  --popover: oklch(0.9306 0.026 92.402);
+  --popover-foreground: oklch(0.3092 0.0518 219.6516);
+  --primary: oklch(0.7606 0.1934 145.3308);
+  --primary-foreground: oklch(0.3668 0.0041 17.3444);
+  --secondary: oklch(0.7463 0.1592 307.5139);
+  --secondary-foreground: oklch(0.3668 0.0041 17.3444);
+  --muted: oklch(0.6979 0.0159 196.794);
+  --muted-foreground: oklch(0.3092 0.0518 219.6516);
+  --accent: oklch(0.747 0.1381 238.6555);
+  --accent-foreground: oklch(0.3668 0.0041 17.3444);
+  --destructive: oklch(63.873% 0.24681 27.968);
+  --destructive-foreground: oklch(0.3668 0.0041 17.3444);
+  --border: oklch(0.6537 0.0197 205.2618);
+  --input: oklch(0.6537 0.0197 205.2618);
+  --ring: oklch(0.7606 0.1934 145.3308);
+  --chart-1: oklch(0.6149 0.1394 244.9273);
+  --chart-2: oklch(0.6437 0.1019 187.384);
+  --chart-3: oklch(0.5924 0.2025 355.8943);
+  --chart-4: oklch(0.5808 0.1732 39.5003);
+  --chart-5: oklch(0.5863 0.2064 27.1172);
+  --sidebar: oklch(0.9735 0.0261 90.0953);
+  --sidebar-foreground: oklch(0.3092 0.0518 219.6516);
+  --sidebar-primary: oklch(0.5924 0.2025 355.8943);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.6437 0.1019 187.384);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.6537 0.0197 205.2618);
+  --sidebar-ring: oklch(0.5924 0.2025 355.8943);
+  --radius: 0rem;
+  --shadow-2xs: 2px 2px 4px 0px hsl(196 83% 10% / 0.07);
+  --shadow-xs: 2px 2px 4px 0px hsl(196 83% 10% / 0.07);
+  --shadow-sm:
+    2px 2px 4px 0px hsl(196 83% 10% / 0.15),
+    2px 1px 2px -1px hsl(196 83% 10% / 0.15);
+  --shadow:
+    2px 2px 4px 0px hsl(196 83% 10% / 0.15),
+    2px 1px 2px -1px hsl(196 83% 10% / 0.15);
+  --shadow-md:
+    2px 2px 4px 0px hsl(196 83% 10% / 0.15),
+    2px 2px 4px -1px hsl(196 83% 10% / 0.15);
+  --shadow-lg:
+    2px 2px 4px 0px hsl(196 83% 10% / 0.15),
+    2px 4px 6px -1px hsl(196 83% 10% / 0.15);
+  --shadow-xl:
+    2px 2px 4px 0px hsl(196 83% 10% / 0.15),
+    2px 8px 10px -1px hsl(196 83% 10% / 0.15);
+  --shadow-2xl: 2px 2px 4px 0px hsl(196 83% 10% / 0.38);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: oklch(0.2673 0.0486 219.8169);
+  --foreground: oklch(0.6979 0.0159 196.794);
+  --card: oklch(0.3092 0.0518 219.6516);
+  --card-foreground: oklch(0.6979 0.0159 196.794);
+  --popover: oklch(0.3092 0.0518 219.6516);
+  --popover-foreground: oklch(0.6979 0.0159 196.794);
+  --primary: oklch(0.5939 0.189 144.0454);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.5127 0.1549 306.6977);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.523 0.0283 219.1365);
+  --muted-foreground: oklch(0.6979 0.0159 196.794);
+  --accent: oklch(0.5672 0.1239 240.94);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(52.687% 0.21338 28.93);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.523 0.0283 219.1365);
+  --input: oklch(0.523 0.0283 219.1365);
+  --ring: oklch(0.5939 0.189 144.0454);
+  --chart-1: oklch(0.6149 0.1394 244.9273);
+  --chart-2: oklch(0.6437 0.1019 187.384);
+  --chart-3: oklch(0.5924 0.2025 355.8943);
+  --chart-4: oklch(0.5808 0.1732 39.5003);
+  --chart-5: oklch(0.5863 0.2064 27.1172);
+  --sidebar: oklch(0.2673 0.0486 219.8169);
+  --sidebar-foreground: oklch(0.6979 0.0159 196.794);
+  --sidebar-primary: oklch(0.5924 0.2025 355.8943);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.6437 0.1019 187.384);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.523 0.0283 219.1365);
+  --sidebar-ring: oklch(0.5924 0.2025 355.8943);
+  --radius: 0rem;
+  --shadow-2xs: 2px 2px 4px 0px hsl(196 83% 10% / 0.07);
+  --shadow-xs: 2px 2px 4px 0px hsl(196 83% 10% / 0.07);
+  --shadow-sm:
+    2px 2px 4px 0px hsl(196 83% 10% / 0.15),
+    2px 1px 2px -1px hsl(196 83% 10% / 0.15);
+  --shadow:
+    2px 2px 4px 0px hsl(196 83% 10% / 0.15),
+    2px 1px 2px -1px hsl(196 83% 10% / 0.15);
+  --shadow-md:
+    2px 2px 4px 0px hsl(196 83% 10% / 0.15),
+    2px 2px 4px -1px hsl(196 83% 10% / 0.15);
+  --shadow-lg:
+    2px 2px 4px 0px hsl(196 83% 10% / 0.15),
+    2px 4px 6px -1px hsl(196 83% 10% / 0.15);
+  --shadow-xl:
+    2px 2px 4px 0px hsl(196 83% 10% / 0.15),
+    2px 8px 10px -1px hsl(196 83% 10% / 0.15);
+  --shadow-2xl: 2px 2px 4px 0px hsl(196 83% 10% / 0.38);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+
+  --animate-blink: blink 1s step-end infinite;
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Zen Maru Gothic", sans-serif;
+  }
+  /* 目次からの移動時に見出しが見やすくなるよう上部に余白を追加 */
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    scroll-margin-top: 3rem;
+  }
+
+  /* カスタムスクロールバー - ピクセルアート風デザイン */
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+    border: none;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--background);
+    border: 4px solid var(--border);
+    border-radius: 0;
+    background-clip: padding-box;
+    transition: border-color 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    border-color: var(--primary);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    border-color: oklch(from var(--primary) calc(l + 0.1) c h);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--background);
+    border: none;
+    border-radius: 0;
+  }
+
+  /* Firefox用のカスタムスクロールバー */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) var(--background);
+  }
+
+  .page-title-bg {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid var(--border);
+    padding: 0.75rem 1rem;
+    line-height: 1.2;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.45);
+  }
+
+  .page-title-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: url("/title-bg.png");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.02);
+  }
+
+  .page-title-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      180deg,
+      rgb(0 0 0 / 0.24) 0%,
+      rgb(0 0 0 / 0.42) 100%
+    );
+  }
+}
+
+/* View Transition用 */
+@layer base {
+  @keyframes scanline {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  @keyframes crt-flicker {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.96;
+    }
+  }
+
+  ::view-transition {
+    position: fixed;
+    inset: 0;
+  }
+
+  @keyframes rgb-shift {
+    0%,
+    100% {
+      filter: none;
+    }
+    50% {
+      filter: drop-shadow(2px 0 0 rgba(255, 0, 0, 0.5))
+        drop-shadow(-2px 0 0 rgba(0, 255, 255, 0.5));
+    }
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    mix-blend-mode: normal;
+  }
+
+  /* View Transitionのフォールバック */
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+      animation: none;
+    }
+
+    ::view-transition::after {
+      display: none;
+    }
+  }
+}

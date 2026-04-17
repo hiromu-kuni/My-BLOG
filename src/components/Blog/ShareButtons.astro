@@ -1,0 +1,52 @@
+---
+import { Share2Icon } from "lucide-react";
+
+import { FacebookIcon } from "@/components/ui/facebook";
+import { TwitterIcon } from "@/components/ui/twitter";
+
+type Props = {
+  title: string;
+  slug: string;
+  showTitle?: boolean;
+};
+
+const { title, slug, showTitle = true } = Astro.props;
+
+const appUrl = import.meta.env.PUBLIC_APP_URL || "http://localhost:4321";
+const shareUrl = `${appUrl}/blog/${slug}`;
+---
+
+<div class="flex flex-col gap-4 not-prose">
+  {
+    showTitle && (
+      <div class="flex items-center gap-2 text-secondary">
+        <Share2Icon size={16} />
+        <h3 class="font-bold text-lg">共有する</h3>
+      </div>
+    )
+  }
+  <div class="flex flex-wrap items-center gap-2">
+    <a
+      class="group"
+      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+        shareUrl,
+      )}&text=${encodeURIComponent(title)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <TwitterIcon className="group-hover:text-accent" client:load />
+      <span class="group-hover:text-accent">Twitter</span>
+    </a>
+    <a
+      class="group"
+      href={`https://www.facebook.com/share.php?u=${encodeURIComponent(
+        shareUrl,
+      )}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FacebookIcon className="group-hover:text-accent" client:load />
+      <span class="group-hover:text-accent">Facebook</span>
+    </a>
+  </div>
+</div>

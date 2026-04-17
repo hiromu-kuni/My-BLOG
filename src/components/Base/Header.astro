@@ -1,0 +1,37 @@
+---
+import HeaderMotionWrapper from "@/components/Base/HeaderMotionWrapper";
+import { IJTypography } from "@/components/ui/ichigojam";
+
+const { pathname } = Astro.url;
+---
+
+<HeaderMotionWrapper client:load>
+  <nav class="flex items-center justify-start max-w-4xl w-full">
+    <ul class="flex items-center gap-4">
+      <li>
+        <a
+          href="/"
+          class={`text-lg font-bold transition-all ${pathname === "/" ? "text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.35)]" : "text-muted-foreground/80 hover:text-foreground"}`}
+        >
+          <IJTypography>Home</IJTypography>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/blog"
+          class={`text-lg font-bold transition-all ${pathname.startsWith("/blog") ? "text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.35)]" : "text-muted-foreground/80 hover:text-foreground"}`}
+        >
+          <IJTypography>Blog</IJTypography>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/author"
+          class={`text-lg font-bold transition-all ${pathname.startsWith("/author") ? "text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.35)]" : "text-muted-foreground/80 hover:text-foreground"}`}
+        >
+          <IJTypography>Author</IJTypography>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</HeaderMotionWrapper>

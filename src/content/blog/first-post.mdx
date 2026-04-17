@@ -1,0 +1,61 @@
+---
+title: "ポートフォリオサイト開設しました！"
+pubDate: 2025-09-01
+description: "サイト初のブログ投稿です"
+topImage: "./images/first-post.png"
+tags: ["astro", "blog"]
+---
+
+import { Button } from "@/components/ui/button";
+import { IJCharacter } from "@/components/ui/ichigojam";
+
+# はじめに
+
+みなさん初めまして！ひろむです🐱
+この度、ポートフォリオサイトを開設しました。
+この投稿では、サイトの紹介と今後の展望についてお話しします。
+
+## サイトの特徴
+
+- **技術スタック**: Astro、React、TypeScript、Tailwind CSS, Framer motion, MDXを使用しています。
+- **デザイン**: シンプルでモダンなデザインかつ、レトロな雰囲気を目指しました。また、ViewTransition APIを活用して、ページ遷移をスムーズにしています。
+- **レスポンシブ**: モバイルからデスクトップまで、どのデバイスでも快適に閲覧できます。
+
+## サイトの機能
+
+現状、ブログ機能のみ実装しています。
+ブログにはMDXを使用しており、JSXコンポーネントを埋め込むことができます。
+
+以下はサンプルのボタンコンポーネントです：
+
+<div class="flex flex-wrap gap-4">
+  <Button>デフォルト</Button>
+  <Button variant="destructive">注意！</Button>
+  <Button variant="secondary">セカンダリ</Button>
+  <Button variant="ghost">ゴースト</Button>
+  <Button variant="link">リンク</Button>
+  <Button variant="outline">アウトライン</Button>
+</div>
+
+私が個人的に使用したかったIchigoJam FONT TrueType（CC BY [IchigoJam](https://ichigojam.net/) / [🎈 BALLOON | FU-SEN](https://15jamrecipe.jimdofree.com/)）も表示できるようにしています。
+
+<IJCharacter characterCodes={"Ǭ Cat"} className="text-2xl" />
+
+## 今後の展望
+
+今後は以下の機能を追加していく予定です（実装優先順）：
+
+- SEO最適化
+- ブログ検索機能
+- [IchigoJam Web](https://fukuno.jig.jp/app/IchigoJam/)の埋め込み（クラウドエディタに近い）
+- プロジェクトギャラリー
+- i18n対応
+- お問い合わせフォーム
+
+思いついたら、どんどん上記以外も追加していきます！
+
+## さいごに
+
+とりあえず、まだ数の少ないブログ記事を増やしていきたいと思います。
+
+ぜひ、定期的に訪れて最新情報をチェックしてくださいね！

@@ -1,0 +1,80 @@
+---
+import { BookOpenTextIcon, MapPinIcon, UserRoundIcon } from "lucide-react";
+
+import BounceText from "@/components/ui/bounce-text";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import GridLayout from "@/layouts/GridLayout.astro";
+---
+
+<BaseLayout title="Author" description="著者プロフィールと活動情報です。">
+  <GridLayout>
+    <div class="max-w-4xl mx-auto space-y-8">
+      <BounceText
+        client:load
+        className="text-2xl md:text-4xl font-bold mb-2 text-center"
+        text="Author Information"
+      />
+
+      <section class="border-4 border-card-foreground bg-card p-6 sm:shadow-[8px_8px_0_0]">
+        <div class="bg-primary border-2 border-card-foreground -mx-3 -mt-3 px-3 py-1 mb-4">
+          <h2 class="text-primary-foreground font-bold flex items-center gap-2">
+            <UserRoundIcon size={20} />
+            基本プロフィール
+          </h2>
+        </div>
+
+        <div class="space-y-3 text-sm">
+          <div class="bg-background border-2 border-card-foreground p-4">
+            <p class="font-bold text-base">國友大睦（ひろむ / hiromu kunitomo）</p>
+            <p class="text-muted-foreground mt-1">Webアプリケーションエンジニア</p>
+          </div>
+          <div class="bg-background border-2 border-card-foreground p-4 flex items-start gap-2">
+            <MapPinIcon size={18} className="mt-0.5 text-accent" />
+            <p>福井県鯖江市出身。Web開発やプログラミング学習に関する発信をしています。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-4 border-card-foreground bg-card p-6 sm:shadow-[8px_8px_0_0]">
+        <div class="bg-secondary border-2 border-card-foreground -mx-3 -mt-3 px-3 py-1 mb-4">
+          <h2 class="text-secondary-foreground font-bold">活動・実績</h2>
+        </div>
+
+        <div class="space-y-3 text-sm">
+          <div class="bg-background border-2 border-card-foreground p-4">
+            <p class="font-bold">IchigoJam検定1級</p>
+            <p class="text-muted-foreground mt-1">
+              教育向けプログラミング環境 IchigoJam に関する知識と実践経験を活かして活動しています。
+            </p>
+          </div>
+
+          <div class="bg-background border-2 border-card-foreground p-4">
+            <div class="flex items-center gap-2 font-bold">
+              <BookOpenTextIcon size={18} />
+              技術書執筆
+            </div>
+            <p class="mt-1">「FOR文と配列にチャレンジする Hana道場式プログラミング」</p>
+            <a
+              href="https://hanadojo.official.ec/items/90694010"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block mt-2 text-primary hover:text-primary/80 underline-offset-4 hover:underline"
+            >
+              書籍ページを見る
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-4 border-card-foreground bg-card p-6 sm:shadow-[8px_8px_0_0]">
+        <div class="bg-accent border-2 border-card-foreground -mx-3 -mt-3 px-3 py-1 mb-4">
+          <h2 class="text-accent-foreground font-bold">このブログについて</h2>
+        </div>
+        <div class="bg-background border-2 border-card-foreground p-4 text-sm leading-relaxed space-y-2">
+          <p>このブログでは、Web技術、プログラミング、学習ノートを中心に発信しています。</p>
+          <p>初心者にも伝わる構成を意識しつつ、実務で使える内容を丁寧にまとめています。</p>
+        </div>
+      </section>
+    </div>
+  </GridLayout>
+</BaseLayout>
