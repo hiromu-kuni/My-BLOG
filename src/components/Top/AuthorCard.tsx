@@ -55,7 +55,7 @@ const AuthorCard = () => {
             </div>
             <div className="bg-background border-2 border-card-foreground p-2">
               <p className="text-xs sm:text-sm leading-relaxed mt-1">
-                福井県鯖江市出身のWebアプリケーションエンジニア。趣味はツーリングとゲーム。
+                データエンジニア・プログラミング教育者/学習者
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -64,7 +64,7 @@ const AuthorCard = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                ⭐ IchigoJam検定1級
+                ⭐ 長期インターンシップ活動(2022年10月~)
               </motion.span>
               <motion.span
                 className="inline-block px-2 py-1 text-xs bg-secondary shadow-[2px_2px_0_0] shadow-secondary/50 text-secondary-foreground border-2 border-secondary"
@@ -84,10 +84,10 @@ const AuthorCard = () => {
                 <span>書籍</span>
               </div>
               <p className="text-xs sm:text-sm font-bold">
-                「FOR文と配列にチャレンジする Hana道場式プログラミング」
+                IchigoJamミッション集
               </p>
               <a
-                href="https://hanadojo.official.ec/items/90694010"
+                href="https://hanadojo.official.ec/items/104233911"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block text-xs text-primary hover:text-primary/80 mt-1 max-md:underline md:hover:underline"
